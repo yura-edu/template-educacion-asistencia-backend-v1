@@ -24,12 +24,13 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
-    "@types/node": "^22.10.0",
+    "@types/node": "^24.0.0",
     "prisma": "^6.2.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": ["@prisma/client", "prisma"]
+  "packageManager": "pnpm@11.21.0",
+  "engines": {
+    "node": ">=24"
   }
 }

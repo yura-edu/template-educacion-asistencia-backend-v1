@@ -7,13 +7,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v7
+      # Sin `version:` a propósito: la versión de pnpm se toma del campo
+      # "packageManager" del package.json (fuente única de verdad).
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
         with:
-          version: 9
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
+          node-version: 24
       - run: pnpm install --no-frozen-lockfile
       - run: pnpm lint
       - run: pnpm build

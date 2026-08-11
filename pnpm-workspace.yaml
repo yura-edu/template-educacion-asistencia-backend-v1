@@ -1,0 +1,13 @@
+# Configuración de pnpm (desde pnpm 10 los ajustes ya no se leen del campo
+# "pnpm" del package.json: viven aquí).
+#
+# pnpm bloquea por defecto los scripts de instalación de las dependencias, y
+# aborta la instalación si encuentra alguno sin declarar. Hay que decir
+# explícitamente cuáles se permiten.
+allowBuilds:
+  # Descargan/preparan el motor nativo de Prisma: imprescindibles.
+  "@prisma/client": true
+  "@prisma/engines": true
+  prisma: true
+  # Solo imprime un banner de agradecimiento; no aporta nada al build.
+  "@nestjs/core": false
