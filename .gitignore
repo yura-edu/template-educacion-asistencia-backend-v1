@@ -1,3 +1,6 @@
 node_modules
 dist
 .env
+.yura-ci/
+.jscpd
+eslint-report.json

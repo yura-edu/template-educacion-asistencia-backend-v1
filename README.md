@@ -63,3 +63,12 @@ Si es tu primer día en este proyecto:
    automáticamente. No hagas push directo a `main`.
 
 ¿Dudas de producto? El catálogo de Yura describe el dominio **Educación Pública — Asistencia**.
+
+## ESLint y el índice de deuda de Yura
+
+Este repo trae un `eslint.config.mjs` que carga **solo** `eslint-plugin-sonarjs`.
+No es el linter del proyecto —para eso está el script `lint` del `package.json`—
+sino la instrumentación que Yura necesita para medir la deuda técnica del código
+nuevo de cada PR. Sin esa config, la deuda del grupo viaja vacía.
+
+No hace falta ejecutarlo a mano: lo corre el workflow de calidad en cada PR.
